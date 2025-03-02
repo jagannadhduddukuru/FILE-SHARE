@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>File Share</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+</head>
+<body>
+
+    <!-- Left Ad Space -->
+    <div class="ads-left">Google Ads</div>
+    
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="logo">File Share</div>
+        <div class="links">
+            <a href="#">Contact</a>
+            <a href="#">Privacy Policy</a>
+        </div>
+    </nav>
+
+    <!-- Main Container -->
+    <div class="container">
+        <h1>Files Share</h1>
+        <div class="upload-section">
+            <div class="upload-box" id="uploadBox">
+                <input type="file" id="fileInput" class="file-input">
+                <div class="upload-content">
+                    <i class="ri-upload-cloud-2-line"></i>
+                    <p>Choose or drag files here</p>
+                    <span>Maximum file size: 100MB</span>
+                    <div id="fileNameDisplay" style="margin-top: 10px;"></div>
+                </div>
+            </div>
+            
+            <button onclick="uploadFile()" class="upload-btn">Upload File</button>
+
+            <div class="code-section">
+                <p id="fileCode" class="file-code"></p>
+                <img id="qrCode" class="qr-code" style="display:none;">
+            </div>
+        </div>
+
+        <div class="download-section">
+            <div class="input-group">
+                <input type="text" id="fileIdInput" placeholder="Enter your file code">
+                <button onclick="downloadFile()" class="download-btn">
+                    <i class="ri-download-2-line"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Right Ad Space -->
+    <div class="ads-right">Google Ads</div>
+
+    <!-- Footer -->
+    <footer>
+        &copy; 2025 File Share. All rights reserved.
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

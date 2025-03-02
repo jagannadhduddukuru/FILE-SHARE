@@ -1,0 +1,275 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+body {
+    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Navbar Styling */
+.navbar {
+    background: #1e293b;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    height: 60px;
+}
+
+/* Navbar Brand */
+.navbar .logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+/* Navbar Links */
+.navbar .links {
+    display: flex;
+    gap: 20px;
+}
+
+.navbar .links a {
+    color: white;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: 0.3s;
+}
+
+.navbar .links a:hover {
+    color: #4f46e5;
+}
+
+/* Spacer to prevent content from going under navbar */
+.navbar-spacer {
+    height: 70px;
+}
+
+/* Main Content */
+.container {
+    max-width: 600px;
+    margin: 50px auto; /* Added margin to prevent overlap */
+    padding: 20px;
+    text-align: center;
+}
+
+/* Footer */
+footer {
+    background: #1e293b;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+/* Ad Spaces */
+.ads-left, .ads-right {
+    width: 160px;
+    height: 100vh;
+    background: #f1f1f1;
+    position: fixed;
+    top: 0;
+}
+
+.ads-left {
+    left: 0;
+}
+
+.ads-right {
+    right: 0;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .ads-left, .ads-right {
+        display: none; /* Hide ads on mobile */
+    }
+
+    .navbar {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        height: auto;
+    }
+}
+/* Main content styling */
+.container {
+    max-width: 500px;
+    margin: auto;
+    padding: 2rem;
+    position: relative;
+}
+
+.upload-section img {
+    max-width: 100%;
+    max-height: 200px;
+    display: block;
+    margin: 1rem auto;
+}
+
+
+.upload-box {
+    position: relative;
+    border: 2px dashed #0e6fee;
+    border-radius: 15px;
+    padding: 2rem;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    background: white;
+}
+
+.upload-box:hover {
+    border-color: #6366f1;
+    background: #f8fafc;
+}
+
+.file-input {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    cursor: pointer;
+}
+
+.upload-content {
+    pointer-events: none;
+}
+
+.upload-content i {
+    font-size: 3rem;
+    color: #6366f1;
+    margin-bottom: 1rem;
+}
+
+.upload-content p {
+    font-size: 1.1rem;
+    color: #1e293b;
+    margin-bottom: 0.5rem;
+}
+
+.upload-content span {
+    font-size: 0.875rem;
+    color: #64748b;
+}
+
+.upload-btn {
+    width: 100%;
+    padding: 1rem;
+    margin-top: 1.5rem;
+    background: #6366f1;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.upload-btn:hover {
+    background: #4f46e5;
+}
+
+.code-section {
+    margin-top: 1.5rem;
+    text-align: center;
+}
+
+.file-code {
+    font-size: 1.25rem;
+    color: #1e293b;
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
+.qr-code {
+    width: 150px;
+    height: 150px;
+    margin: 0 auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.download-section {
+    background: white;
+    border-radius: 20px;
+    padding: 1.5rem;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.input-group {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+
+#fileIdInput {
+    flex: 1;
+    padding: 1rem;
+    border: 2px solid #e2e8f0;
+    border-radius: 10px;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+}
+
+#fileIdInput:focus {
+    outline: none;
+    border-color: #6366f1;
+}
+
+.download-btn {
+    background: #6366f1;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.download-btn:hover {
+    background: #4f46e5;
+}
+
+.download-btn i {
+    font-size: 1.5rem;
+}
+
+@media (max-width: 640px) {
+    .container {
+        padding: 1rem;
+    }
+    
+    .upload-section,
+    .download-section {
+        padding: 1.5rem;
+    }
+    
+    .upload-box {
+        padding: 1.5rem;
+    }
+    
+    .upload-content i {
+        font-size: 2.5rem;
+    }
+}
